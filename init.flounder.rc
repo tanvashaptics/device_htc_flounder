@@ -6,7 +6,6 @@ on init
     verity_load_state
 
     start watchdogd
-
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
@@ -109,6 +108,11 @@ on boot
 
     write /proc/sys/net/core/rmem_max 1048576
     write /proc/sys/net/core/wmem_max 1048576
+
+    #Enable tcpip debugging by default
+    setprop service.adb.tcp.port 5555
+    stop adbd
+    start adbd
 
 on fs
     mount_all /fstab.flounder

@@ -100,3 +100,7 @@
 
 # tlk_daemon
 /vendor/bin/tlk_daemon                 u:object_r:tee_exec:s0
+
+#Tanvas driver
+/proc/driver/tanvas0			u:object_r:tanvas_file:s0
+

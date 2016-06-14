@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
+GAPPS_VARIANT := stock
+
 PRODUCT_PACKAGES := \
+    libhapticmanager \
     libwpa_client \
     hostapd \
     wpa_supplicant \
@@ -69,6 +72,9 @@ PRODUCT_COPY_FILES += \
 # headset keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:/system/media/bootanimation.zip
 
 PRODUCT_PACKAGES += \
     libwpa_client \
@@ -281,6 +287,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354
 $(call inherit-product-if-exists, vendor/htc/flounder/audio/lifevibes/lvve/device-vendor-lvve.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder/audio/tfa/device-vendor-tfa.mk)
 
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
 # Add dependency of the proprietary keystore.flounder module.
 PRODUCT_PACKAGES += \
     libkeymaster_messages

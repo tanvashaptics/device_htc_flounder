@@ -1,0 +1,5 @@
+allow untrusted_app tanvas_file:file { rw_file_perms };
+allow untrusted_app tanvas_dir:file { rw_file_perms };
+allow untrusted_app tanvas_dev:file { rw_file_perms };
+allow untrusted_app tanvas_file:dir search;
+allow untrusted_app usb_device:chr_file rw_file_perms;

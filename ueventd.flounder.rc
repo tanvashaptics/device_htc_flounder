@@ -101,3 +101,7 @@
 /sys/devices/platform/host1x/tegradc.0	smartdimmer/enable		0660 root graphics
 /sys/devices/platform/host1x/tegradc.0	smartdimmer/sd_window		0660 root graphics
 /sys/devices/platform/host1x/tegradc.0	smartdimmer/sd_window_enable	0660 root graphics
+
+#tanvas
+/dev/bus/usb/003/*	0666	system	system
+/dev/uinput		0666	system	system

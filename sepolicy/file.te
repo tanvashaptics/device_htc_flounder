@@ -9,3 +9,9 @@ type ramdump_data_file, file_type, data_file_type;
 
 #Didim file used by surfaceflinger
 type sysfs_didim, sysfs_type, fs_type;
+
+#Types used by hapticflinger
+type tanvas_file, file_type;
+type tanvas_dir, file_type;
+type tanvas_dev, file_type;
+
